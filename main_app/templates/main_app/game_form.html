@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mb-3 row">
+<form action="" method="post" class="row g-3">
+    {% csrf_token %} 
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input class="w-8" type="submit" value="Add A Suggestion" style="width: 200px; height: 30px;">
+</form>
+</div>
+{% endblock %}

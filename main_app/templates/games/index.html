@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="padding: 10px">Game List</h1>
+
+{% for game in games %}
+<a href="{% url 'detail' game.id %}" style="margin-top: 15px; text-decoration: none; color: black; ">
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <div class="">
+        <div class="card-content black-text">
+          <span class="card-title">{{ game.title }}</span>
+            <p  class="card-text">Genre: {{ game.genre }}</p>
+            <p  class="card-text">Price: ${{ game.price }}</p>
+        </div>
+    </a>
+        <div class="card-link">
+          <a class="btn btn-primary btn-sm" href="https://store.steampowered.com/" style="color: aliceblue;" target="_blank">Steam</a>
+          <a class="btn btn-dark btn-sm" href="https://www.epicgames.com/store/en-US/" style="color: aliceblue;" target="_blank">Epic Games</a>
+          <a class="btn btn-sm" href="https://originmaine.com/" style="color: aliceblue; background-color: rgb(228, 132, 24);" target="_blank">Origin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+{% endfor %} {% endblock %}

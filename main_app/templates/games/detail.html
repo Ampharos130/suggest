@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="padding-top: 5rem;">{{game.title}} suggestion</h1>
+<br>
+<div class="card" style="padding: 2rem 2rem 2rem 2rem;">
+  <div class="">
+    <span class="">{{ game.name }}</span>
+    <h3>genre: {{ game.genre }}</h3>
+    <h3>price: ${{ game.price }}</h3>
+    <br>
+  </div>
+  <div class="">
+  <a class="btn btn-primary" href="{% url 'games_update' game.id %}">Edit</a>
+  <a class="btn btn-danger" href="{% url 'games_delete' game.id %}">Delete</a>
+  </div>
+</div>
+{% endblock %}
