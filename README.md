@@ -18,6 +18,7 @@ An application that list games you would suggest
 ## Unsolved Errors
 
 - many to many relationship
+- heroku deployment on windows
 
 ## Future Enhancements
 
